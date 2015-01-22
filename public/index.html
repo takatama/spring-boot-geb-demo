@@ -3,7 +3,7 @@
     <title>Status</title>
   </head>
   <body>
-    <div id="status"></div>
+    <div id="status">Sleeping...</div>
     <button id="getup-button" onclick="getup()">Get up</button>
     <button id="sleep-button" onclick="sleep()">Sleep</button>
     <script>
@@ -13,14 +13,14 @@
     };
 
     function getup() {
+      alert(message.getup);
       document.getElementById('status').textContent = message.getup;
     }
 
     function sleep() {
+      alert(message.sleep);
       document.getElementById('status').textContent = message.sleep;
     }
-
-    window.onload = sleep;
     </script>
   </body>
 </html>
