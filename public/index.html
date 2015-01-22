@@ -1,8 +1,26 @@
 <html>
   <head>
-    <title>Hello</title>
+    <title>Status</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <div id="status"></div>
+    <button id="getup-button" onclick="getup()">Get up</button>
+    <button id="sleep-button" onclick="sleep()">Sleep</button>
+    <script>
+    var message = {
+      getup: "Getting up!",
+      sleep: "Sleeping..."
+    };
+
+    function getup() {
+      document.getElementById('status').textContent = message.getup;
+    }
+
+    function sleep() {
+      document.getElementById('status').textContent = message.sleep;
+    }
+
+    window.onload = sleep;
+    </script>
   </body>
 </html>
